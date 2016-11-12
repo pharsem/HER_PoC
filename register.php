@@ -9,7 +9,8 @@ include "header.php";
 
 $class = $_GET['class'];
 
-$sql = "INSERT INTO registration (student_id, class_id, time) VALUES ('".$_SESSION['username']."', '".$class."', NOW())";
+$sql = "INSERT INTO registration (student_id, class_id, time) VALUES ('".$_SESSION['username']."', '".$class."', 
+        CONVERT_TZ(NOW(),'-5:00','+1:00'))";
 
 ?>
 <div class="container">
