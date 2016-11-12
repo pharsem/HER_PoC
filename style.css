@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    widows: 100%;
+    overflow: hidden;
+}
+
+header {
+    background: #337ab7;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+header h5, header h5 a {
+    color: white;
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+footer p, footer a {
+    font-size: small;
+    color: grey;
+}

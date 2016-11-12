@@ -5,12 +5,12 @@
 // ini_set("display_errors", 1);
 ?>
 
-<h2>Logg inn med lærer-ID og passord</h2>
+<h3>Logg inn med lærer-ID og passord</h3>
 
 <?php
 $msg = '';
 
-if (isset($_POST['login']) && !empty($_POST['username'])
+if (isset($_POST['login_teacher']) && !empty($_POST['username'])
     && !empty($_POST['password'])) {
 
     $teacherID = $_POST['username'];
@@ -34,11 +34,8 @@ if (isset($_POST['login']) && !empty($_POST['username'])
 ?>
 
 
-<form class = "form-signin" role = "form"
-      action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);
-      ?>" method = "post">
-    <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
-    <input type = "text" name = "username" placeholder = "Lærer-ID" required autofocus></br>
-    <input type = "password" name = "password" placeholder = "Passord" required>
-    <button class = "btn btn-lg btn-primary" type = "submit" name = "login">Login</button>
+<form class="form-group" role = "form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+    <input type="text" class="form-control" name="username" placeholder="Lærer-ID" required autofocus><br>
+    <input type = "password" class="form-control" name = "password" placeholder = "Passord" required><br>
+    <button type="submit" class="btn btn-default" name="login_teacher">Logg inn</button>
 </form>

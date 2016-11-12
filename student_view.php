@@ -4,10 +4,11 @@ $sql = "SELECT class_id, class_name, class_time FROM classes";
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<table>
+    echo "<table class='table table-striped'>
             <tr>
                 <th>Tidspunkt</th>
                 <th>Forelesning</th>
+                <th>Registrer</th>
             </tr>";
     while($row = $result->fetch_assoc()) {
         echo "<tr>
