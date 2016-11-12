@@ -26,8 +26,11 @@ if (isset($_SESSION['valid']) && $_SESSION['valid'] == true && $_SESSION['role']
     ?>
     <a href="logout.php">Logg ut</a> <?php
 } else if (isset($_SESSION['valid']) && $_SESSION['valid'] == true && $_SESSION['role'] == 'teacher') {
-    print_r($_SESSION);
-    echo '--LÆRER--'; ?>
+    echo 'Lærer ' . $_SESSION['username'] . ' logget inn';
+
+    include "teacher_view.php";
+
+    ?>
     <a href="logout.php">Logg ut</a> <?php
 } else { ?>
 <ul class="nav nav-pills">
